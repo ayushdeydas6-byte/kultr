@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KULTR is your campus culture club. Discover events, festivals, competitions and experiences.">
+    <title>KULTR. | The Campus Culture Club</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <a href="#home" class="logo">KUL<span>TR.</span></a>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#events">Discover</a>
+            <a href="#about">Our Story</a>
+        </div>
+
+        <a href="#events" class="nav-btn">FIND YOUR VIBE ↗</a>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+            <span class="tag">✳ YOUR CAMPUS. YOUR CULTURE.</span>
+
+            <h1>
+                Make Every<br>
+                Moment <span>Count.</span>
+            </h1>
+
+            <p>
+                Not just another event platform. Your gateway to
+                unforgettable campus experiences, unexpected
+                connections and stories worth telling.
+            </p>
+
+            <a href="#events" class="primary-btn">
+                EXPLORE THE SCENE ↗
+            </a>
+
+            <div class="hero-stats">
+                <div>
+                    <strong>20+</strong>
+                    <small>EVENTS</small>
+                </div>
+
+                <div>
+                    <strong>5K+</strong>
+                    <small>STUDENTS</small>
+                </div>
+
+                <div>
+                    <strong>10+</strong>
+                    <small>CATEGORIES</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="visual-card">
+                <div class="visual-icon">🎸</div>
+
+                <span>✳ THE NEXT BIG THING</span>
+
+                <h3>Campus<br>Music Night.</h3>
+
+                <p>Music. People. Unforgettable energy.</p>
+
+                <div class="visual-date">
+                    NOV 20 · 6:00 PM
+                </div>
+            </div>
+
+            <div class="floating-icon">✳</div>
+
+            <div class="floating-text">
+                LIVE LOUD.<br>
+                LIVE DIFFERENT.
+            </div>
+        </div>
+
+    </section>
+
+    <!-- CAMPUS PULSE TICKER -->
+    <div class="ticker">
+        <div class="ticker-track">
+            <span>✳ CAMPUS PULSE</span>
+            <span>NEW EVENTS. NEW ENERGY.</span>
+            <span>✳ DISCOVER YOUR NEXT EXPERIENCE</span>
+            <span>MAKE MEMORIES, NOT EXCUSES.</span>
+            <span>✳ CAMPUS PULSE</span>
+            <span>NEW EVENTS. NEW ENERGY.</span>
+            <span>✳ DISCOVER YOUR NEXT EXPERIENCE</span>
+            <span>MAKE MEMORIES, NOT EXCUSES.</span>
+        </div>
+    </div>
+
+    <!-- EVENTS SECTION -->
+    <section class="events-section" id="events">
+
+        <div class="section-heading">
+            <div>
+                <span class="tag">✳ THE CAMPUS HAPPENINGS</span>
+                <h2>Find Your <span>Scene.</span></h2>
+            </div>
+
+            <p>
+                Six experiences. Endless possibilities.<br>
+                What's your next move?
+            </p>
+        </div>
+
+        <!-- SEARCH AND FILTER -->
+        <div class="event-controls">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="⌕ Search your next experience..."
+                aria-label="Search events"
+            >
+
+            <div class="filters">
+                <button class="filter active" data-category="All">ALL</button>
+                <button class="filter" data-category="Technology">TECH</button>
+                <button class="filter" data-category="Music">MUSIC</button>
+                <button class="filter" data-category="Sports">SPORTS</button>
+                <button class="filter" data-category="Cultural">CULTURE</button>
+            </div>
+
+        </div>
+
+        <!-- DYNAMIC EVENT CARDS -->
+        <div class="event-grid" id="eventGrid"></div>
+
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+
+        <span class="tag">✳ THIS IS KULTR.</span>
+
+        <h2>
+            One campus.<br>
+            <span>Infinite stories.</span>
+        </h2>
+
+        <p>
+            We believe college is about more than classrooms and
+            assignments. It's about finding your people, discovering
+            your passions and creating moments that stay with you.
+            KULTR brings the entire campus experience together.
+        </p>
+
+        <a href="#events" class="about-btn">
+            BE PART OF IT ↗
+        </a>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="#home" class="logo">KUL<span>TR.</span></a>
+
+        <p>
+            BUILT FOR THE CULTURE. © 2026 KULTR.
+        </p>
+
+        <a href="#home" class="back-top">BACK TO TOP ↑</a>
+    </footer>
+
+    <!-- EVENT DETAILS MODAL -->
+    <div class="modal" id="detailsModal">
+
+        <div class="modal-content details-content">
+
+            <button class="close-btn" id="closeDetails" aria-label="Close">
+                ✕
+            </button>
+
+            <span class="tag">✳ EVENT SPOTLIGHT</span>
+
+            <img
+                id="detailImage"
+                class="detail-image"
+                src=""
+                alt="Event"
+            >
+
+            <span id="detailCategory" class="event-category"></span>
+
+            <h2 id="detailName"></h2>
+
+            <p id="detailDescription"></p>
+
+            <div class="detail-meta">
+                <p>📅 <span id="detailDate"></span></p>
+                <p>📍 <span id="detailVenue"></span></p>
+            </div>
+
+            <button id="detailRegister" class="primary-btn">
+                I'M IN — REGISTER NOW ↗
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- REGISTRATION MODAL -->
+    <div class="modal" id="registerModal">
+
+        <div class="modal-content">
+
+            <button class="close-btn" id="closeModal" aria-label="Close">
+                ✕
+            </button>
+
+            <span class="tag">✳ SAVE YOUR SPOT</span>
+
+            <h2>Join the <span>Scene.</span></h2>
+
+            <p id="selectedEvent">Select an event</p>
+
+            <form id="registrationForm">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your Full Name"
+                    minlength="3"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email Address"
+                    required
+                >
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="10-digit Phone Number"
+                    maxlength="10"
+                    required
+                >
+
+                <button type="submit" class="primary-btn">
+                    CONFIRM MY SPOT ↗
+                </button>
+
+            </form>
+
+            <p id="message" role="status"></p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
